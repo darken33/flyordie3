@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class MenuController : MonoBehaviour {
+	// 0 standalone, 1 webGL, 2 android
 	public int type;
 	public Component bt_quit;
 	public Component soundClick;
@@ -30,13 +31,49 @@ public class MenuController : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("History");
 	}
 
+	public void History1OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("History1");
+	}
+
+	public void History2OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("History2");
+	}
+
 	public void CreditsOnClick() {
 		soundClick.GetComponent<AudioSource> ().Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Credits");
 	}
 
+	public void Credits1OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Credits1");
+	}
+
+	public void Credits2OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Credits2");
+	}
+
+	public void Credits3OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Credits3");
+	}
+
+	public void Credits4OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Credits4");
+	}
+
+	public void Credits5OnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Credits5");
+	}
+
 	public void QuitOnClick() {
 		soundClick.GetComponent<AudioSource> ().Play ();
+		Application.Quit();
 	}
 
 	public void HomeOnClick() {

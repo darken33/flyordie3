@@ -15,15 +15,18 @@ public class PlayerController : MonoBehaviour
 
 	public GameObject shot;
 	public Transform shotSpawn;
+	public SimpleTouchPad touchPad;
+	public SimpleTouchAreaButton areaButton;
+
 	public float fireRate;
 
 	private float nextFire;
+	private Quaternion calibrationQuaternion;
 
 	void FixedUpdate ()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-
 		Vector3 movement = new Vector3 (moveHorizontal, -moveVertical, 0.0f);
 		GetComponent<Rigidbody>().velocity = movement * speed;
 

@@ -19,3 +19,24 @@ C:\Users\philippe.bousquet\Documents\Fly\Fly or Die 3\Temp\bin\Debug\UnityEngine
 C:\Users\philippe.bousquet\Documents\Fly\Fly or Die 3\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\philippe.bousquet\Documents\Fly\Fly or Die 3\obj\Debug\Assembly-CSharp.dll
 C:\Users\philippe.bousquet\Documents\Fly\Fly or Die 3\obj\Debug\Assembly-CSharp.pdb
+C:\PHB\src\flyordie3\Temp\bin\Debug\Assembly-CSharp.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEditor.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEngine.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEngine.UI.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Mono.Cecil.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Unity.DataContract.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Unity.UNetWeaver.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Unity.CecilTools.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEngine.xml
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEditor.xml
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEngine.UI.xml
+C:\PHB\src\flyordie3\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\PHB\src\flyordie3\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\PHB\src\flyordie3\obj\Debug\Assembly-CSharp.dll
+C:\PHB\src\flyordie3\obj\Debug\Assembly-CSharp.pdb
