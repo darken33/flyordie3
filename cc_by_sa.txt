@@ -1,0 +1,907 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-0dd18d999f1e3d1e515cf15c5628a70a3859d1af1c5daadeaa73ab4adfdeae9e.css" integrity="sha256-DdGNmZ8ePR5RXPFcViinCjhZ0a8cXareqnOrSt/erp4=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-f67aef7e4a38af92da850cea347c429b458a35608a33e6fd535c7543a4584818.css" integrity="sha256-9nrvfko4r5LahQzqNHxCm0WKNWCKM+b9U1x1Q6RYSBg=" media="all" rel="stylesheet" />
+    
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-70dfb928c731b17636b56e4f6f97ffe02f2e3e94d71f2230379ece855d2904dd.css" integrity="sha256-cN+5KMcxsXY2tW5Pb5f/4C8uPpTXHyIwN57OhV0pBN0=" media="all" rel="stylesheet" />
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/system-fonts-d60dee4b68e3a38b01c0389551a0e38f04acd897ec85592f405d045ee853b3d1.css" integrity="sha256-1g3uS2jjo4sBwDiVUaDjjwSs2JfshVkvQF0EXuhTs9E=" media="all" rel="stylesheet" />
+
+    <link as="script" href="https://assets-cdn.github.com/assets/frameworks-149d9338c2665172870825c78fa48fdcca4d431d067cbf5fda7120d9e39cc738.js" rel="preload" />
+    
+    <link as="script" href="https://assets-cdn.github.com/assets/github-f004f70daf69296b10d34319b72eac02be9310011804f678498d69e5b53957eb.js" rel="preload" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    
+    <title>drkslide/cc_by_sa.txt at master · darken33/drkslide · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars1.githubusercontent.com/u/7147216?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="darken33/drkslide" name="twitter:title" /><meta content="drkslide - Sources du projet drkSlide - un jeu de Taquin pour android" name="twitter:description" />
+      <meta content="https://avatars1.githubusercontent.com/u/7147216?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="darken33/drkslide" property="og:title" /><meta content="https://github.com/darken33/drkslide" property="og:url" /><meta content="drkslide - Sources du projet drkSlide - un jeu de Taquin pour android" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="25A0CE5C:1046:8C2D27:5788CF1F" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="YjA3YWQ1YWE0NzUxYjNhZTRkN2NhMGIxNjhiOWM0ZWFjOGUwNTQ1NDk2YjFjZWVkMGU3MjU0ZmM0N2U0ZGEwNXx7InJlbW90ZV9hZGRyZXNzIjoiMzcuMTYwLjIwNi45MiIsInJlcXVlc3RfaWQiOiIyNUEwQ0U1QzoxMDQ2OjhDMkQyNzo1Nzg4Q0YxRiIsInRpbWVzdGFtcCI6MTQ2ODU4MzcxMX0=">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="de8da439d831186b601a9873ea24bdaf3cd95f8f">
+    <meta content="da5356c78762c8d2c6b95fb507299177795bf533" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="bcd54eec0ccc29698ac8a84ab224cb73">
+    
+
+      
+  <meta name="description" content="drkslide - Sources du projet drkSlide - un jeu de Taquin pour android">
+  <meta name="go-import" content="github.com/darken33/drkslide git https://github.com/darken33/drkslide.git">
+
+  <meta content="7147216" name="octolytics-dimension-user_id" /><meta content="darken33" name="octolytics-dimension-user_login" /><meta content="18410129" name="octolytics-dimension-repository_id" /><meta content="darken33/drkslide" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="18410129" name="octolytics-dimension-repository_network_root_id" /><meta content="darken33/drkslide" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/darken33/drkslide/commits/master.atom" rel="alternate" title="Recent Commits to drkslide:master" type="application/atom+xml">
+
+
+      <link rel="canonical" href="https://github.com/darken33/drkslide/blob/master/sources/cc_by_sa.txt" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-out   env-production windows vis-public page-blob">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+
+    <button class="btn-link right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav site-header-nav-main">
+        <a href="/personal" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item nav-item-opensource" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item nav-item-business" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/features /business/customers /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item nav-item-explore" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /explore">
+          Explore
+</a>      </nav>
+
+      <div class="site-header-actions">
+            <a class="btn btn-primary site-header-actions-btn" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+          <a class="btn site-header-actions-btn mr-2" href="/login?return_to=%2Fdarken33%2Fdrkslide%2Fblob%2Fmaster%2Fsources%2Fcc_by_sa.txt" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      </div>
+
+        <nav class="site-header-nav site-header-nav-secondary">
+          <a class="nav-item" href="/pricing">Pricing</a>
+          <a class="nav-item" href="/blog">Blog</a>
+          <a class="nav-item" href="https://help.github.com">Support</a>
+          <a class="nav-item header-search-link" href="https://github.com/search">Search GitHub</a>
+              <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/darken33/drkslide/search" class="js-site-search-form" data-scoped-search-url="/darken33/drkslide/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        tabindex="1"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+        </nav>
+    </div>
+  </div>
+</header>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fdarken33%2Fdrkslide"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/darken33/drkslide/watchers">
+    1
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fdarken33%2Fdrkslide"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/darken33/drkslide/stargazers">
+      0
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fdarken33%2Fdrkslide"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+      </a>
+
+    <a href="/darken33/drkslide/network" class="social-count">
+      0
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="/darken33" class="url fn" rel="author">darken33</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/darken33/drkslide" data-pjax="#js-repo-pjax-container">drkslide</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/darken33/drkslide" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /darken33/drkslide" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/darken33/drkslide/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /darken33/drkslide/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">0</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/darken33/drkslide/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /darken33/drkslide/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+
+  <a href="/darken33/drkslide/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /darken33/drkslide/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"></path></svg>
+    Pulse
+</a>
+  <a href="/darken33/drkslide/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /darken33/drkslide/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/darken33/drkslide/blob/a1c9b426df7acd603efc0772a0c9699013db87bd/sources/cc_by_sa.txt" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:caa381660766d03e20d79bf23eb2474f -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/darken33/drkslide/blob/master/sources/cc_by_sa.txt"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/v1.10/sources/cc_by_sa.txt"
+              data-name="v1.10"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v1.10">
+                v1.10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/1.9/sources/cc_by_sa.txt"
+              data-name="1.9"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.9">
+                1.9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/1.8/sources/cc_by_sa.txt"
+              data-name="1.8"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.8">
+                1.8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/1.7/sources/cc_by_sa.txt"
+              data-name="1.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.7">
+                1.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/1.6.1/sources/cc_by_sa.txt"
+              data-name="1.6.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.6.1">
+                1.6.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/1.6/sources/cc_by_sa.txt"
+              data-name="1.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.6">
+                1.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/darken33/drkslide/tree/1.5.1/sources/cc_by_sa.txt"
+              data-name="1.5.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.5.1">
+                1.5.1
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="btn-group right">
+    <a href="/darken33/drkslide/find/master"
+          class="js-pjax-capture-input btn btn-sm"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/darken33/drkslide"><span>drkslide</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/darken33/drkslide/tree/master/sources"><span>sources</span></a></span><span class="separator">/</span><strong class="final-path">cc_by_sa.txt</strong>
+  </div>
+</div>
+
+<include-fragment class="commit-tease" src="/darken33/drkslide/contributors/master/sources/cc_by_sa.txt">
+  <div>
+    Fetching contributors&hellip;
+  </div>
+
+  <div class="commit-tease-contributors">
+    <img alt="" class="loader-loading left" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" />
+    <span class="loader-error">Cannot retrieve contributors at this time</span>
+  </div>
+</include-fragment>
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="btn-group">
+      <a href="/darken33/drkslide/raw/master/sources/cc_by_sa.txt" class="btn btn-sm " id="raw-url">Raw</a>
+        <a href="/darken33/drkslide/blame/master/sources/cc_by_sa.txt" class="btn btn-sm js-update-url-with-hash">Blame</a>
+      <a href="/darken33/drkslide/commits/master/sources/cc_by_sa.txt" class="btn btn-sm " rel="nofollow">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://windows.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:windows">
+            <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
+        </a>
+
+        <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
+        </button>
+        <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
+        </button>
+  </div>
+
+  <div class="file-info">
+      78 lines (55 sloc)
+      <span class="file-info-divider"></span>
+    23.8 KB
+  </div>
+</div>
+
+  
+
+  <div itemprop="text" class="blob-wrapper data type-text">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">     CREATIVE COMMONS CORPORATION N&#39;EST PAS UN CABINET D&#39;AVOCATS ET NE FOURNIT PAS DE CONSEIL JURIDIQUE. LA DISTRIBUTION DE CETTE LICENCE NE CREE AUCUNE RELATION JURIDIQUE ENTRE LES PARTIES ET CREATIVE COMMONS. CREATIVE COMMONS MET A DISPOSITION CES INFORMATIONS EN L’ETAT. CREATIVE COMMONS NE DONNE AUCUNE GARANTIE CONCERNANT LES INFORMATIONS FOURNIES ET DECLINE TOUTE RESPONSABILITE POUR LES PREJUDICES QUI RESULTERAIENT DE LEUR UTILISATION. </td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">Licence</td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">L&#39;ŒUVRE (TELLE QUE DEFINIE CI-DESSOUS) EST MISE A DISPOSITION SELON LES TERMES DE CETTE LICENCE PUBLIQUE CREATIVE COMMONS (CI-APRES DENOMMEE « LPCC » OU « LICENCE »). L&#39;ŒUVRE EST PROTEGEE PAR LE DROIT DE LA PROPRIETE LITTERAIRE ET ARTISTIQUE OU TOUTE AUTRE LOI APPLICABLE. TOUTE UTILISATION DE L&#39;ŒUVRE AUTRE QUE CELLE AUTORISEE PAR CETTE LICENCE EST RÉSERVÉE.</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">L’EXERCICE DE TOUT DROIT SUR L’ŒUVRE MISE A DISPOSITION EMPORTE ACCEPTATION DES TERMES DE LA LICENCE. EN RAISON DU CARACTERE CONTRACTUEL DE LA LICENCE, L’OFFRANT ACCORDE A L’ACCEPTANT LES DROITS CONTENUS DANS CETTE LICENCE EN CONTREPARTIE DE SON ACCEPTATION.</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">1. Définitions</td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">    Adaptation : œuvre créée soit à partir de l’Œuvre seule, soit à partir de l’Œuvre et d’autres œuvres préexistantes. Constituent notamment des Adaptations, les traductions, adaptations, œuvres composites, arrangements ou modifications d’une œuvre littéraire et artistique, d’un phonogramme, d’un vidéogramme ou d’une interprétation d’une œuvre, y compris les adaptations cinématographiques ou toute autre forme dans laquelle l’Œuvre est susceptible d’être refondue, transformée ou adaptée, notamment toute forme dérivée de l’original de manière identifiable. Il est toutefois entendu qu’une Œuvre qui constitue une Collection ne sera pas considérée comme une Adaptation aux fins de la présente Licence. Au cas où l’Œuvre serait une création musicale, une interprétation ou un phonogramme, la synchronisation de l’Œuvre avec une image animée sera considérée comme une Adaptation aux fins de la présente Licence.</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">    Collection : recueil d’œuvres qui, en raison de la sélection et de l’arrangement de son contenu, constitue une création intellectuelle dans laquelle chaque Œuvre se trouve incluse dans son ensemble, sous une forme non modifiée, avec une ou plusieurs autres contributions, chacune d’elles constituant des œuvres en elles-mêmes indépendantes et distinctes qui sont rassemblées pour former cet ensemble. Constituent notamment des Collections, les encyclopédies, anthologies, interprétations, phonogrammes, vidéogrammes ou émissions, ou toute œuvre autre que celles désignées à l’article 1(h). Aux fins de la présente Licence, une création qui constitue une Collection ne sera pas considérée comme une Adaptation (telle que définie ci-dessus).</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">    Distribution : mise à disposition du public de la version originale ou des copies de l&#39;Œuvre ou d&#39;une Adaptation, par la vente ou tout autre transfert de propriété ou par tout mode de communication au public dans la mesure où ces activités sont sources de droits exclusifs (location, prêt, etc).</td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">    Éléments de la Licence : attributs de la Licence tels qu&#39;ils ont été choisis par l&#39;Offrant et qui figurent dans le titre de cette Licence : Attribution – Partage à l&#39;Identique.</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">    Licence Compatible Creative Commons : licence qui est listée à http://creativecommons.org/compatiblelicenses qui a été approuvée par Creative Commons substantiellement équivalente à cette Licence, parce que, au minimum, cette licence : (i) contient des conditions qui ont le même objectif, la même signification et le même effet que les Éléments de la Licence de cette Licence; et, (ii) permet explicitement de re-licencier les adaptations d&#39;œuvres mises à disposition selon les termes de cette licence, sous cette Licence ou une licence Creative Commons d&#39;une juridiction qui comporte les mêmes Éléments que cette Licence.</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">    Offrant : la ou les personne(s) physique(s) ou morale(s) ou la ou les entité(s) qui mettent l’Œuvre à la disposition du public selon les termes de la présente Licence.</td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">    Titulaire de Droits Originaire : dans l’hypothèse d’une œuvre littéraire ou artistique, l’Auteur, entendu comme la ou les personnes physiques ou morales ou les entités qui ont créé l&#39;Œuvre; et en outre, le cas échéant, (i) dans l’hypothèse d’une interprétation, les acteurs, chanteurs, musiciens, danseurs, ou toute autre personne qui joue, chante, déclame ou interprète l’œuvre littéraire, artistique ou folklorique; (ii) dans l’hypothèse d’un phonogramme ou d’un vidéogramme, le producteur, entendu comme la personne physique ou morale qui procède à la première fixation de l’interprétation sur un support; (iii) dans l’hypothèse d’une émission, l’entreprise de communication audiovisuelle qui procède à la diffusion de l’émission; (iv) dans l’hypothèse d’une base de données, le producteur.</td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">    Œuvre : création protégeable par le droit de la propriété littéraire et artistique (droits d&#39;auteur, droits voisins et droits sui generis des producteurs de bases de données) mise à disposition selon les termes de la Licence. Peuvent notamment constituer une Œuvre toute création dans le domaine littéraire, scientifique et artistique, quel qu&#39;en soit le mode ou la forme d&#39;expression, y compris sous forme numérique, telle qu’un livre, un pamphlet et autres écrits ; une conférence, une allocution, une plaidoirie, un cours ou un sermon ou d&#39;autres œuvres de même nature ; une œuvre dramatique ou une comédie musicale ; une œuvre chorégraphique ou un pantomime ; une composition musicale avec ou sans paroles ; une œuvre cinématographique à laquelle sont assimilées des œuvres exprimées par un procédé analogue à la cinématographie ; un dessin, une peinture, une création architecturale, une sculpture, une gravure ou une lithographie ; une création photographique à laquelle sont assimilées des œuvres exprimées par un procédé analogue à la photographie ; une œuvre des arts appliqués ; une œuvre graphique et typographique ; une illustration, une carte, un plan, un croquis ou une œuvre tridimensionnelle relative à la géographie, la topographie, l&#39;architecture ou aux sciences ; une interprétation, une émission ; un phonogramme ou un vidéogramme ; une anthologie ou un recueil d’œuvres ou de données diverses ou une base de données dans la mesure où elle est protégée par le droit d’auteur ou le droit des producteurs de bases de données à la condition que celles-ci soient protégées par le droit applicable qui ne couvre pas seulement les bases de données protégées par le droit d&#39;auteur (pour éviter toute ambiguïté, les sections 3(a), 3(b) et 3(c) ne s&#39;appliqueront pas quand seul le droit des producteurs de bases de données s&#39;applique); une interprétation réalisée par un artiste de cirque ou de variété ; les créations des industries saisonnières de l&#39;habillement et de la parure.</td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">    Acceptant : la ou les personne(s) physique(s) ou morale(s) ou entité(s) qui exercent sur l’Œuvre les droits accordés par cette Licence et qui n’ont pas précédemment violé les conditions de cette Licence ou qui ont reçu l’autorisation expresse de la part de l’Offrant d’exercer les droits conférés par cette licence malgré une violation précédente.</td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">    Représentation : représentation de l’Œuvre et communications au public de ces représentations publiques par un procédé quelconque, quelque soit le type de transmission, notamment numérique et incluant les modes d’exploitation prévus par le droit applicable. Constitue également notamment une communication au public, la mise à disposition d’Œuvres protégées de manière à ce que le public puisse y avoir accès de l’endroit et au moment qu’il choisit individuellement, les interprétations et communications au public des interprétations de l&#39;Œuvre y compris les interprétations publiques au format numérique ainsi qu’une diffusion ou une rediffusion de l’Œuvre par tout moyen, notamment par des signes, des sons ou des images.</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">    Reproduction : toute copie de l&#39;Œuvre de quelque manière et sous quelque forme que ce soit, notamment numérique et incluant les modes d&#39;exploitation prévus par le droit applicable. Constitue aussi notamment une Reproduction, un enregistrement sonore ou visuel, une fixation ou une reproduction de fixations de l&#39;Œuvre, y compris le stockage d&#39;une interprétation, d’un phonogramme ou d’un vidéogramme au format numérique ou sur tout autre support électronique.</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">2. Exceptions et limitations aux droits exclusifs. Les exceptions et limitations aux droits exclusifs prévues par la loi applicable ne sont pas affectées par la présente Licence.</td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">3. Étendue de l’autorisation. Sous réserve des conditions de la présente Licence, l’Offrant autorise l’Acceptant à exercer à titre gratuit, non-exclusif, pour la durée de protection des droits applicables et pour le monde entier, les droits de :</td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">    Reproduire, Distribuer et Représenter l&#39;Œuvre, incorporer l&#39;Œuvre dans une ou plusieurs Collections et reproduire l&#39;Œuvre même incorporée dans lesdites Collections ;</td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">    Créer, Reproduire, Distribuer et Représenter des Adaptations, à la condition que ces Adaptations, notamment toute traduction sur tout support, soient accompagnées des mentions appropriées par étiquetage, démarcation ou identification de manière à faire apparaître clairement que des modifications ont été apportées à l’Œuvre. Par exemple, une traduction pourrait porter la mention « L’œuvre originaire a été traduite du français à l’anglais » ou en cas de modification « L’œuvre originaire a été modifiée » ;</td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">    Lorsque l&#39;Œuvre est une base de données soumise au droit des producteurs de bases de données, extraire et réutiliser des parties substantielles.</td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">    Pour éviter toute ambiguïté :</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">        Régime légal de gestion collective obligatoire.</td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">        Dans les cas où des utilisations de l&#39;Œuvre seraient soumises à un régime légal de gestion collective obligatoire (auquel le droit ne permet pas de renoncer), l&#39;Offrant se réserve le droit exclusif de collecter ces redevances par l&#39;intermédiaire de la société de perception et de répartition des droits compétente. Sont notamment concernés la radiodiffusion et la communication dans un lieu public de phonogrammes publiés à des fins de commerce, certains cas de retransmission par câble et satellite, la copie privée d&#39;Œuvres fixées sur phonogrammes ou vidéogrammes, la reproduction par reprographie, le prêt en bibliothèque ;</td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">        Régime de gestion collective obligatoire assorti de possibilité de renonciation.</td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">        Dans les juridictions où il est possible de renoncer au droit de percevoir des redevances au titre d&#39;un quelconque régime de licence légale ou de gestion collective obligatoire, l’Offrant renonce au droit exclusif de percevoir lesdites redevances découlant de l’exercice par l’Acceptant des droits consentis en vertu de la présente Licence ;</td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">        Régime de gestion collective facultative.</td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">        L’Offrant renonce au droit de percevoir des redevances (que ce soit à titre individuel ou, au cas où l’Offrant serait membre d’un organisme de gestion collective facultative, par le biais de cet organisme) découlant de l’exercice par l’Acceptant des droits accordés par la présente Licence.</td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">Les droits mentionnés ci-dessus peuvent être exercés sur tous supports, médias, procédés, techniques et dans tous formats, incluant, dans la mesure du possible, les futurs médias et formats. Les droits mentionnés ci-dessus incluent le droit d&#39;effectuer les modifications techniquement nécessaires à leur exercice sur d’autres supports, médias, procédés, techniques et formats. Les droits qui ne sont pas expressément accordés par l’Offrant à l’Acceptant par la présente Licence sont réservés. Dans le cas où l&#39;Offrant est titulaire de droits sui generis sur les bases de données conformément à la loi nationale transposant la Directive Européenne sur les bases de données, l&#39;Offrant renonce à ce droit.</td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">4. Restrictions. L&#39;autorisation accordée par l&#39;Article 3 est expressément soumise et limitée par les restrictions suivantes :</td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">    L&#39;Acceptant peut Distribuer ou Représenter l&#39;Œuvre uniquement selon les termes de cette licence. Il doit inclure une copie de la Licence, ou son Identifiant Uniforme de Ressource (URI), à toute copie de l&#39;Œuvre qu&#39;il Distribue ou Représente. L&#39;Acceptant ne peut pas offrir ou imposer de conditions d&#39;utilisation sur l&#39;Œuvre qui restreignent les termes de la Licence ou la capacité du bénéficiaire ultérieur d&#39;exercer les droits qui lui sont accordés par cette Licence. L&#39;Acceptant ne peut consentir de sous-licence sur l&#39;Œuvre. Il doit conserver intacts tous les avertissements qui se réfèrent à cette Licence et l’avertissement sur les garanties avec chaque copie de l’Œuvre qu’il distribue ou représente. Lorsque l’Acceptant distribue ou représente l’Œuvre, il ne doit pas imposer de mesure technique de protection susceptible de restreindre la capacité du bénéficiaire ultérieur à exercer les droits conférés par la présente Licence. L’article 4(a) s’applique à l’Œuvre telle qu’incorporée dans une Collection, mais n’a pas pour effet d’imposer que la Collection soit soumise aux conditions de la Licence. Si l&#39;Acceptant crée une Collection, il doit, à la demande de tout Offrant et dans la mesure du possible, supprimer de la Collection toute référence audit Offrant, selon les modalités de l’Article 4(c), et ce conformément à la demande. Si l&#39;Acceptant crée une Adaptation, il doit, à la demande de tout Offrant et dans la mesure du possible, supprimer de l&#39;Adaptation toute référence audit Offrant, selon les modalités de l’Article 4(c), et ce conformément à la demande.</td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">    L&#39;Acceptant peut distribuer ou représenter une Adaptation uniquement sous les conditions : (i) de cette Licence ; (ii) d&#39;une version ultérieure de cette Licence comprenant les mêmes Éléments de la Licence ; (iii) d&#39;une licence Creative Commons non transposée or transposée dans une juridiction (dans cette version ou dans une version ultérieure de la licence) comprenant les mêmes Elements de la Licence (par exemple la licence « Attribution - Partage à l&#39;Identique 3.0 Japon » (la « Licence Applicable ») ; (iv) d&#39;une Licence Creative Commons Compatible. L&#39;Acceptant peut distribuer une Adaptation selon l&#39;une des licences mentionnées dans (iv) à la condition de respecter les conditions de cette licence. L&#39;Acceptant doit distribuer l&#39;Adaptation selon l&#39;une des licences mentionnées dans (i), (ii) ou (iii) (la “Licence Applicable”) à la condition de respecter les termes de la Licence Applicable d&#39;une manière générale et les dispositions suivantes :</td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">    L&#39;Acceptant doit inclure une copie, ou l&#39;URI, de la Licence Applicable à toute copie de chaque Adaptation qu&#39;il Reproduit, Distribue ou Représente.</td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">    L&#39;Acceptant ne peut pas offrir ou imposer de conditions d&#39;utilisation sur l&#39;Adaptation qui restreignent les termes de la Licence Applicable, ou l&#39;exercice des droits accordés au bénéficiaire de l&#39;Adaptation par la Licence Applicable.</td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">    Il doit conserver intacts tous les avertissements qui se réfèrent à la Licence Applicable et à l’avertissement sur les garanties avec chaque copie de l’œuvre telle qu’incluse dans l’Adaptation que l’Acceptant distribue ou représente.</td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">    Lorsque l’Acceptant distribue ou représente une Adaptation, il ne doit pas imposer de mesure technique de protection sur l’Adaptation susceptible de restreindre la capacité du bénéficiaire ultérieur d’exercer les droits accordés par la Licence Applicable. Le présent article 4(b) s’applique à l’Adaptation telle qu’incorporée dans une collection, mais n’a pas pour effet d’imposer que la collection en dehors de l’Adaptation elle-même soit soumise aux conditions de la Licence Applicable.</td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">    Sauf introduction d’une demande prévue à l’Article 4(a), l&#39;Acceptant doit, lorsqu&#39;il distribue ou représente l&#39;Œuvre, ou toute Adaptation ou Collection, garder intacts tous les avertissements sur les droits d’auteur concernant l’Œuvre et fournir, de manière appropriée au support ou au média qu&#39;il utilise : (i) le nom du Titulaire de Droits Originaire (ou le pseudonyme, le cas échéant) s&#39;il est mentionné, et/ou si le Titulaire de Droits Originaire et/ou l’Offrant désigne une ou des parties (par exemple un organisme de financement, un éditeur ou un journal) à attribuer (« les Parties à Attribuer ») dans l’avertissement sur les droits d’auteur de l’Offrant, les conditions d’utilisation ou, par un autre moyen approprié, le nom de la Partie ou des Parties à Attribuer ; (ii) le titre de l’Œuvre, s’il est mentionné ; (iii) dans la mesure du possible, l’URI que l&#39;Offrant spécifie comme étant associée à l’Œuvre, sauf si ledit URI ne fait pas référence à l’avertissement sur les droits ou aux informations sur la licence relative à l’Œuvre ; et, (iv) conformément à l’Article 3(b), dans le cas d’une Adaptation, une mention identifiant l’utilisation de l&#39;Œuvre dans l’Adaptation (par exemple « traduction française de l’Œuvre par le Titulaire de Droits Originaire » ou « scénario fondé sur l’Œuvre du Titulaire de Droits Originaire »). Les crédits requis par cet article 4(c) pourront être mis en œuvre par tout moyen approprié, sous réserve, toutefois, qu’en cas d’Adaptation ou de Collection, ces crédits figurent d’une manière au moins aussi visible que les crédits relatifs aux autres auteurs y ayant contribué, si de tels crédits apparaissent. A toutes fins utiles, l&#39;Acceptant ne pourra utiliser les crédits requis par cet Article qu&#39;à des fins d’attribution, de la manière susmentionnée et en exerçant les droits accordés par la Licence. L&#39;Acceptant ne peut, implicitement ou explicitement, affirmer ou laisser supposer une quelconque relation, parrainage ou aval par le Titulaire de Droits Originaire, l&#39;Offrant, la ou les Parties à Attribuer selon le cas, et l’Acceptant ou son utilisation de l’Œuvre, sans avoir l’autorisation distincte, expresse, écrite et préalable du Titulaire de Droits Originaire, de l&#39;Offrant et/ou des Parties à Attribuer.</td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">    Pour éviter toute ambiguïté, les restrictions accordées par l’article 3 et les articles 4(a) et 4(b) ne sont pas applicables à la partie de l’œuvre qui est soumise uniquement aux droits des producteurs de bases de données.</td>
+      </tr>
+      <tr>
+        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">    A moins d’une limitation aux droits exclusifs prévue par la loi applicable, si l’Acceptant Reproduit, Distribue ou Représente l’Œuvre en elle-même, ou au sein d’une Adaptation ou d’une Collection, il doit respecter les droits moraux du Titulaire de Droits Originaire dans la mesure où ce Titulaire en bénéficie (comme les auteurs et les artistes-interprètes) et ne peut y renoncer.</td>
+      </tr>
+      <tr>
+        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">5. Représentation, Garanties et Avertissement</td>
+      </tr>
+      <tr>
+        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">SAUF ACCORD CONTRAIRE CONVENU PAR ECRIT ENTRE LES PARTIES ET DANS LA LIMITE DU DROIT APPLICABLE, L’OFFRANT MET L’ŒUVRE A DISPOSITION DE L’ACCEPTANT EN L’ETAT, SANS DECLARATION OU GARANTIE D’AUCUNE SORTE, EXPRESSE, IMPLICITE, LÉGALE OU AUTRE. SONT NOTAMMENT EXCLUES LES GARANTIES CONCERNANT LA COMMERCIABILITE, LA CONFORMITE, LES VICES CACHES ET LES VICES APPARENTS.</td>
+      </tr>
+      <tr>
+        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">6. Limitation de responsabilité. A l&#39;exception des garanties d&#39;ordre public imposées par la loi applicable, l&#39;Offrant ne sera en aucun cas tenu responsable vis-à-vis de l&#39;Acceptant, sur la base d&#39;aucune théorie juridique ni en raison d&#39;aucun préjudice direct, indirect, matériel ou moral, résultant de l&#39;exécution du présent Contrat ou de l&#39;utilisation de l&#39;Œuvre, y compris dans l&#39;hypothèse où l&#39;Offrant avait connaissance de la possible existence d&#39;un tel préjudice.</td>
+      </tr>
+      <tr>
+        <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">7. Résiliation</td>
+      </tr>
+      <tr>
+        <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">    Toute violation par l&#39;Acceptant des clauses de cette Licence entraînera sa résiliation automatique et la fin des droits qui en découlent. Les Licences accordées aux personnes physiques ou morales qui ont reçu de la part de l&#39;Acceptant des Adaptations ou des Collections dans le cadre de la présente Licence ne seront pas résiliées, à condition que lesdites personnes physiques ou morales respectent pleinement leurs obligations. Les articles 1, 2, 5, 6, 7 et 8 de la présente Licence continuent à s&#39;appliquer après la résiliation de celle-ci.</td>
+      </tr>
+      <tr>
+        <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">    Sous réserve des conditions mentionnées ci-dessus, la présente Licence est accordée pour toute la durée du droit d&#39;auteur ou tout autre droit applicable à l&#39;Œuvre. Néanmoins, l&#39;Offrant se réserve à tout moment le droit d&#39;exploiter l&#39;Œuvre sous une autre Licence ou d&#39;en cesser la Distribution à tout moment. Cependant, cette décision ne devra pas conduire à retirer cette Licence (ou toute autre Licence qui a été accordée, ou doit être accordée en application de la présente Licence) qui continuera à s&#39;appliquer dans tous ses effets à moins qu&#39;elle ne soit résiliée dans les conditions décrites ci-dessus.</td>
+      </tr>
+      <tr>
+        <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line">8. Divers</td>
+      </tr>
+      <tr>
+        <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">    Lorsque l’Acceptant distribue ou représente l’Œuvre ou une Collection, l’Offrant accorde au bénéficiaire suivant, une licence sur l’Œuvre avec les mêmes termes et conditions que celle accordée à l’Acceptant.</td>
+      </tr>
+      <tr>
+        <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">    Lorsque l’Acceptant distribue ou représente une Adaptation, l’Offrant accorde au bénéficiaire une licence sur l’œuvre dans des conditions identiques à celles accordées à l’Acceptant.</td>
+      </tr>
+      <tr>
+        <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">    Si en vertu de la loi applicable, une quelconque disposition de la présente Licence était déclarée nulle, non valide ou inapplicable, cela n&#39;aurait pas pour effet d&#39;annuler ou de rendre inapplicables les autres dispositions de la Licence. Sans action ultérieure des parties, ladite disposition sera modifiée dans la mesure minimum nécessaire à sa validité et son applicabilité.</td>
+      </tr>
+      <tr>
+        <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">    Aucune des conditions ou des dispositions de la présente Licence ne sera réputée comme ayant fait l&#39;objet d&#39;une renonciation, et aucune violation comme ayant été acceptée, sans le consentement écrit et signé de la partie concernée.</td>
+      </tr>
+      <tr>
+        <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">    La présente Licence représente l&#39;intégralité de l&#39;accord conclu entre les parties à propos de l&#39;Œuvre, objet de la présente Licence. Il n&#39;existe aucun élément annexe, accord ou mandat portant sur cette Œuvre qui ne soit mentionné ci-dessus. L&#39;Offrant ne sera tenu par aucune disposition supplémentaire qui pourrait apparaître dans une communication provenant de l&#39;Acceptant. La présente Licence ne peut être modifiée sans l&#39;accord écrit de l&#39;Offrant et de l&#39;Acceptant.</td>
+      </tr>
+      <tr>
+        <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">    Avertissements de Creative Commons</td>
+      </tr>
+      <tr>
+        <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">    Creative Commons n&#39;est pas partie à cette Licence et n&#39;offre aucune forme de garantie relative à l&#39;Œuvre. Creative Commons décline toute responsabilité à l&#39;égard de l&#39;Acceptant ou de toute autre partie, quel que soit le fondement légal de cette responsabilité et quel que soit le préjudice subi, direct, indirect, matériel ou moral, qui surviendrait du fait de cette Licence. Cependant, si Creative Commons s&#39;est expressément identifié comme Offrant pour mettre une Œuvre à disposition selon les termes de cette Licence, Creative Commons jouira de tous les droits et obligations d&#39;un Offrant.</td>
+      </tr>
+      <tr>
+        <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">    A l&#39;exception des utilisations limitées à indiquer au public que l&#39;Œuvre est mise à disposition sous la licence Creative Commons, Creative Commons n&#39;autorise l&#39;utilisation par aucune partie de la marque « Creative Commons » ou de toute autre indication ou logo de Creative Commons sans le consentement écrit préalable de Creative Commons. Toute utilisation autorisée devra se conformer aux directives d&#39;utilisation de la marque en vigueur telles qu&#39;elles pourront être publiées sur le site web ou sur demande. Cette restriction relative à la marque ne constitue pas une partie de cette Licence.</td>
+      </tr>
+      <tr>
+        <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">    Creative Commons Corporation peut être contacté sur http://creativecommons.org/. </td>
+      </tr>
+</table>
+
+  </div>
+
+</div>
+
+<button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="hidden">Jump to Line</button>
+<div id="jump-to-line" style="display:none">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.04921s from github-fe127-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-FJ2TOMJmUXKHCCXHj6SP3MpNQx0GfL9f2nEg2eOcxzg=" src="https://assets-cdn.github.com/assets/frameworks-149d9338c2665172870825c78fa48fdcca4d431d067cbf5fda7120d9e39cc738.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-8AT3Da9pKWsQ00MZty6sAr6TEAEYBPZ4SY1p5bU5V+s=" src="https://assets-cdn.github.com/assets/github-f004f70daf69296b10d34319b72eac02be9310011804f678498d69e5b53957eb.js"></script>
+      
+      
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

@@ -6,13 +6,19 @@ public class MenuController : MonoBehaviour {
 	public int type;
 	public Component bt_quit;
 	public Component soundClick;
-
+	public GUIText titleText;
+	private float scale;
 	public void Start() {
 		// Ne pas afficher le bouton quit en mode web
 		if (type == 1) {
 			if (bt_quit != null) {
 				bt_quit.gameObject.SetActive (false);
 			}
+		}
+		// Taille de la police de Titre
+		scale = Screen.currentResolution.width / 854;
+		if (titleText != null) {
+			titleText.fontSize = Mathf.RoundToInt (titleText.fontSize * scale);
 		}
 	}
 

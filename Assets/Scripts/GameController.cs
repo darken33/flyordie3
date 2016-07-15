@@ -30,9 +30,17 @@ public class GameController : MonoBehaviour {
 	private bool gameOver;
 	private bool restart;
 	private int numberEnemyTypes;
+	private float scale;
 
 	// Use this for initialization
 	void Start () {
+		scale = Screen.currentResolution.width / 854;
+		scoreText.fontSize = Mathf.RoundToInt(scoreText.fontSize * scale);
+		waveText.fontSize = Mathf.RoundToInt(waveText.fontSize * scale);
+		targetText.fontSize = Mathf.RoundToInt(targetText.fontSize * scale);
+		dieText.fontSize = Mathf.RoundToInt(dieText.fontSize * scale);
+		gameOverText.fontSize = Mathf.RoundToInt(gameOverText.fontSize * scale);
+		restartText.fontSize = Mathf.RoundToInt(restartText.fontSize * scale);
 		bt_no.gameObject.SetActive (false);
 		bt_yes.gameObject.SetActive (false);
 		gameOver = false;
