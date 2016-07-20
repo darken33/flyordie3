@@ -106,4 +106,9 @@ public class MenuController : MonoBehaviour {
 		soundClick.GetComponent<AudioSource> ().Play ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Help_Interceptor");
 	}
+
+	public void NextBonusClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Help_Bonus");
+	}
 }

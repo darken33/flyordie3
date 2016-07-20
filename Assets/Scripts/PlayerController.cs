@@ -15,8 +15,13 @@ public class PlayerController : MonoBehaviour
 
 	public GameObject shot;
 	public Transform shotSpawn;
-	public SimpleTouchPad touchPad;
-	public SimpleTouchAreaButton areaButton;
+	public GameObject shot2;
+	public Transform[] shotSpawn2;
+
+	public GameObject shield;
+
+//	public SimpleTouchPad touchPad;
+//	public SimpleTouchAreaButton areaButton;
 	private MenuController menuController;
 
 	public float fireRate;
@@ -24,9 +29,12 @@ public class PlayerController : MonoBehaviour
 	private float nextFire;
 	private Quaternion calibrationQuaternion;
 	private Vector3 accelerationSnapshot;
+	private int secondaryShots;
 
 	void Start(){
 		GameObject menuControllerObject = GameObject.FindWithTag ("MenuController");
+		secondaryShots = 0;
+		shield.SetActive (false);
 		if (menuControllerObject != null) {
 			menuController = menuControllerObject.GetComponent<MenuController> ();
 		}
@@ -38,7 +46,18 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 	}
-
+	public void IncLazers() {
+		secondaryShots++;
+		if (secondaryShots > 2) {
+			secondaryShots = 2;
+		}
+	}
+	public void ResetLazers() {
+		secondaryShots = 0;
+	}
+	public void SetActiveShield() {
+		shield.SetActive (true);
+	}
 	void CalibrateAccelerometer() {
 		accelerationSnapshot = Input.acceleration;
 		Quaternion rotateQuaternion = Quaternion.FromToRotation (new Vector3 (0.0f, 0.0f, -1.0f), accelerationSnapshot);
@@ -85,6 +104,12 @@ public class PlayerController : MonoBehaviour
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			if (secondaryShots >= 1) {
+				Instantiate(shot2, shotSpawn2[0].position, shotSpawn2[0].rotation);
+			}
+			if (secondaryShots >= 2) {
+				Instantiate(shot2, shotSpawn2[1].position, shotSpawn2[1].rotation);
+			}
 		}
 	}
 }

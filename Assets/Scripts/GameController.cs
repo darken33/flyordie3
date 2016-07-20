@@ -5,16 +5,20 @@ public class GameController : MonoBehaviour {
 
 	// GameObjects
 	public GameObject[] hazards;
+	public GameObject[] bonus;
 	public GUIText scoreText;
 	public GUIText gameOverText;
 	public GUIText restartText;
 	public GUIText targetText;
 	public GUIText waveText;
 	public GUIText dieText;
+	public GUIText livesText;
 	public Component bt_no;
 	public Component bt_yes;
 
 	public int startEnemyType;
+	public int bonusDec;
+	public int bonusValue;
 	public float startWait;
 	public float spawnWait;
 	public Vector3 spawnValues;
@@ -31,10 +35,14 @@ public class GameController : MonoBehaviour {
 	private bool restart;
 	private int numberEnemyTypes;
 	private float scale;
+	private int bonusRandom;
+	private int lives;
 
 	// Use this for initialization
 	void Start () {
 		scale = Screen.currentResolution.width / 854;
+		lives = 5;
+		livesText.fontSize = Mathf.RoundToInt(livesText.fontSize * scale);
 		scoreText.fontSize = Mathf.RoundToInt(scoreText.fontSize * scale);
 		waveText.fontSize = Mathf.RoundToInt(waveText.fontSize * scale);
 		targetText.fontSize = Mathf.RoundToInt(targetText.fontSize * scale);
@@ -51,10 +59,12 @@ public class GameController : MonoBehaviour {
 		targetText.text = "+";
 		score = 0;
 		wave = 0;
+		bonusRandom = 100;
 		hazardCount = hazardStart;
 		numberEnemyTypes = startEnemyType;
 		UpdateWave ();
 		UpdateScore ();
+		UpdateLives ();
 		StartCoroutine (SpawnWaves());
 	}
 		
@@ -66,6 +76,29 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
+
+	public void DecBonusRandom() {
+		bonusRandom -= bonusDec;
+		if (bonusRandom < bonusValue) {
+			bonusRandom = bonusValue;
+		}
+	}
+
+	public int DecLives() {
+		lives--;
+		UpdateLives ();
+		return lives;
+	}
+
+	public int IncLives() {
+		lives++;
+		if (lives > 5) {
+			lives = 5;
+		}
+		UpdateLives ();
+		return lives;
+	}
+
 
 	IEnumerator SpawnWaves () {
 		yield return new WaitForSeconds (startWait);
@@ -83,6 +116,10 @@ public class GameController : MonoBehaviour {
 			}
 			for (int i = 0; i < hazardCount; i++) {
 				GameObject hazard = hazards [Random.Range(0, numberEnemyTypes)];
+				if (bonusValue >= Random.Range (0, bonusRandom)) {
+					bonusRandom = 100;
+					hazard = bonus [Random.Range (0, bonus.Length)];
+				}
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), Random.Range (-spawnValues.y, spawnValues.y), spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
 				Instantiate (hazard, spawnPosition, spawnRotation);
@@ -115,8 +152,12 @@ public class GameController : MonoBehaviour {
 	void UpdateWave() {
 		waveText.text = "Wave : " + wave;
 	}
-
+	void UpdateLives() {
+		livesText.text = "Lives : " + lives;
+	}
 	public void GameOver(){
+		lives = 0;
+		UpdateLives ();
 		targetText.text = "";
 		gameOverText.text = "Game Over";
 		gameOver = true;
