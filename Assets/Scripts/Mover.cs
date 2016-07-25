@@ -1,12 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mover : MonoBehaviour
-{
+/**
+ * Fly Or Die 3 by Philippe Bousquet <darken33@free.fr>
+ * Mover - Auto move for hazards, items, lasers, ...
+ * 
+ * GNU General Public License
+ */
+public class Mover : MonoBehaviour {
+
+	// Speed for objects on the Z axis
 	public float speed;
 
-	void Start ()
-	{
+	/**
+	 * Start() - Called on initialization
+	 */ 
+	void Start () {
 		GetComponent<Rigidbody>().velocity = transform.forward * speed;
 	}
 }

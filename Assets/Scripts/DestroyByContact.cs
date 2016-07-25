@@ -1,16 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyByContact : MonoBehaviour
-{
+/**
+ * Fly Or Die 3 by Philippe Bousquet <darken33@free.fr>
+ * DestroyByContact - Destroy the objects when they enter in collision (In Game)
+ * 
+ * GNU General Public License
+ */
+public class DestroyByContact : MonoBehaviour {
+
+	// Explosion for the object
 	public GameObject explosion;
+
+	// Explosion for the player
 	public GameObject playerExplosion;
+
+	// Animation for shield Activation
 	public GameObject shieldActivation;
+
+	// Score earned when the object is destroyed
 	public int scoreValue;
+
+	// The Game Controller
 	private GameController gameController;
+
+	// The Player Controller
 	private PlayerController playerController;
 
-	void Start(){
+	/**
+	 * Start() - Called on intialisation
+	 */
+	void Start() {
+		// Attach the GameController
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
 		if (gameControllerObject != null) {
 			gameController = gameControllerObject.GetComponent<GameController> ();
@@ -18,6 +39,7 @@ public class DestroyByContact : MonoBehaviour
 		if (gameController == null) {
 			Debug.Log ("Can't find GameController");
 		}
+		// Attach the PlayerController
 		GameObject playerControllerObject = GameObject.FindWithTag ("Player");
 		if (playerControllerObject != null) {
 			playerController = playerControllerObject.GetComponent<PlayerController> ();
@@ -27,101 +49,110 @@ public class DestroyByContact : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter(Collider other) 
-	{
-		// Dans le cas du Boundary 
+	/**
+	 * OnTriggerEnter() - Called when object enter in collision with other collider
+	 */
+	void OnTriggerEnter(Collider other) {
+	
+		// Do nothing with the Boundary 
 		if (other.tag == "Boundary") {
 			return;
 		}
-		// Dans le cas d'un Astéroid ou d'un Enemy
+		// If object is an Asteroid or an Enemy
 		else if (this.tag == "Asteroid" || this.tag == "Enemy") {
-			// S'il est touché par un ennemy, un Astéroide ou un bonus ne rien faire
+			// Do nothing if the other is an Enemy, an Asteroid or a Bonus
 			if (other.tag == "Enemy" || other.tag == "Asteroid" || other.tag == "Shield_bonus" || other.tag == "Life_bonus" || other.tag == "Laser_bonus") {
 				return;
 			}
-			// Sinon le faire exploser et le détruire
+			// Else destroy it
 			else {
 				Instantiate (explosion, transform.position, transform.rotation);
-				// S'il est touché par un laser du joueur on incrémente le score
+				// If it's destroyed by the player laser (add score and incraise Bonus chance)
 				if (other.tag == "Bolt_p") {
 					gameController.AddScore (scoreValue);
 					gameController.DecBonusRandom ();
 				}
-				// S'il est touché par le joueur fin du jeu
+				// If it's destroyed by the Player (the player Explode and its the end of the game)
 				if (other.tag == "Player") {
 					Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 					if (gameController != null) {
 						gameController.GameOver ();
 					}
 				}
-				// S'il est touché par le bouclier désactiver celui-ci
+				// If it's destroyed by the Shield (desactive it)
 				if (other.tag == "Shield") {
 					Instantiate (shieldActivation, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
 					other.gameObject.SetActive (false);
 				} 
-				// Sinon on détruit l'objet touché
+				// Else destroy the other object
 				else {
 					Destroy(other.gameObject);
 				}
-				// On détruit l'Astéroide
+				// Destroy the object
 				Destroy(gameObject);
 				return;
 			}
 		}
-		// Dans le cas d'un bonus Shield
+		// If object is a Shield bonus item
 		else if (this.tag == "Shield_bonus") {
-			// S'il est touché par le joueur on active le bouclier
+			// If other is player or player's laser activate the Shield
 			if (other.tag == "Bolt_p" || other.tag == "Player") {
 				Instantiate (explosion, this.transform.position, this.transform.rotation);
 				Instantiate (shieldActivation, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
 				playerController.SetActiveShield ();
 			} 
-			// On détruit l'Astéroide
+			// Destroy the object;
 			Destroy(gameObject);
 			return;
 		}
-		// Dans le cas d'un bonus Shield
+		// If object is a Laser bonus item
 		else if (this.tag == "Laser_bonus") {
-			// S'il est touché par le joueur on active le bouclier
+			// If other is player or player's laser increase lasers spawns
 			if (other.tag == "Bolt_p" || other.tag == "Player") {
 				Instantiate (explosion, this.transform.position, this.transform.rotation);
 				playerController.IncLazers();
 			} 
-			// On détruit l'Astéroide
+			// Destroy the object;
 			Destroy(gameObject);
 			return;
 		}
-		// Dans le cas d'un bonus Shield
+		// If object is a Life bonus item
 		else if (this.tag == "Life_bonus") {
-			// S'il est touché par le joueur on active le bouclier
+			// If other is player or player's laser increase player lives
 			if (other.tag == "Bolt_p" || other.tag == "Player") {
 				Instantiate (explosion, this.transform.position, this.transform.rotation);
 				gameController.IncLives();
 			} 
-			// On détruit l'Astéroide
+			// Destroy the object;
 			Destroy(gameObject);
 			return;
 		}
-		// Dans le cas dun lazer ennemy
+		// If object is an Enemy's laser
 		else if (this.tag == "Bolt_e") {
-			// S'il touche le bouclier
+			// If other is the Shield desactivate it
 			if (other.tag == "Shield") {
 				Instantiate (shieldActivation, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
 				other.gameObject.SetActive(false);
 			} 
-			// S'il touche le joueur
+			// If other is the Player
 			if (other.tag == "Player") {
+				// Reset Lasers Spawns
 				playerController.ResetLazers ();
+				// Decrease the player lives
 				if (gameController.DecLives () <= 0) {
+					// If player life is 0 it's the end of the game
 					Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 					if (gameController != null) {
 						gameController.GameOver ();
 					}
+					// Destroy player
 					Destroy (other.gameObject);
 				} else {
+					// Play a laser impact
 					Instantiate (explosion, other.transform.position, other.transform.rotation);
 				}
 			}
+			// Destroy the object
 			Destroy(gameObject);
 			return;
 		}

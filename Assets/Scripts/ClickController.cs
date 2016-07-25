@@ -1,14 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Fly Or Die 3 by Philippe Bousquet <darken33@free.fr>
+ * ClickController - Simulate the action Click on VR Mode (VR Only)
+ * 
+ * GNU General Public License
+ */
 public class ClickController : MonoBehaviour {
 
+	// The menu 
 	private MenuController menuController;
+
+	// Tag of the collider 
 	private string colliderName;
+
+	// Name of the object
 	private string objectName;
 
-	// Use this for initialization
+	/**
+	 * Start() - Called on initialisation
+	 */ 
 	void Start () {
+		// Attach the MenuController
 		GameObject menuControllerObject = GameObject.FindWithTag ("MenuController");
 		if (menuControllerObject != null) {
 			menuController = menuControllerObject.GetComponent<MenuController> ();
@@ -17,23 +31,34 @@ public class ClickController : MonoBehaviour {
 			Debug.Log ("Can't find MenuController");
 		} 
 	}
-	
-	void OnTriggerEnter(Collider other) 
-	{
+
+	/**
+	 * OntTriggerEnter() - Called when the point enter in collision with other collider
+	 */ 
+	void OnTriggerEnter(Collider other) {
+		// Save Tag and object name
 		colliderName = other.tag;
 		objectName = other.gameObject.name;
-		Debug.Log (colliderName);
+		// Call ClickOject (after 0.5 second if the object is also in collision with the pointer Click)
 		StartCoroutine (ClickObject());
 	}
 
-	void OnTriggerExit() 
-	{
+	/**
+	 * OnTriggerExit() - Called when the point get out collision
+	 */
+	void OnTriggerExit() {
+		// Reset Tag and Object Name
 		colliderName = "";
 		objectName = "";
 	}
 
+	/**
+	 * ClickObject() - Action click on an object
+	 */
 	IEnumerator ClickObject () {
+		// Wait 0.5 seconds
 		yield return new WaitForSeconds (0.5f);
+		// Action to perform
 		if (colliderName == "NO_bt") {
 			menuController.HomeOnClick ();
 		} else if (colliderName == "YES_bt") {
@@ -51,7 +76,7 @@ public class ClickController : MonoBehaviour {
 		} else if (colliderName == "HOME_bt") {
 			menuController.HomeOnClick();
 		} else if (colliderName == "NEXT_bt") {
-			Debug.Log (objectName);
+			// For the NEXT_bt Tag we have many Objects
 			if (objectName == "Next_Player") {
 				menuController.NextAsteroidOnClick();
 			}

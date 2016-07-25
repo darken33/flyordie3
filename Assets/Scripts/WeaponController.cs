@@ -1,25 +1,34 @@
-	using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class WeaponController : MonoBehaviour 
-{
+/**
+ * Fly Or Die 3 by Philippe Bousquet <darken33@free.fr>
+ * WeaponController - Automatic weapon fire
+ * 
+ * GNU General Public License
+ */
+public class WeaponController : MonoBehaviour {
 
+	// Enemy's laser object
     public GameObject shot;
+	// Shot Spawn
     public Transform shotSpawn;
+	// Delay before autofire
+	public float delay;
+	// Fire rating
     public float fireRate;
-    public float delay;
 
-    private AudioSource audioSource;
-
-    void Start ()
-    {
-        //audioSource = GetComponent<AudioSource> ();
+	/**
+	 * Satert() - Called during initialization
+	 */ 
+    void Start () {
         InvokeRepeating ("Fire", delay, fireRate);
     }
 
-    void Fire ()
-    {
+	/**
+	 * Fire() - instantiate a laser
+	 */
+    void Fire () {
         Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
-        //audioSource.Play ();
     }
 }
