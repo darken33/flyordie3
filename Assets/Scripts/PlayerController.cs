@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 		if (menuController == null) {
 			Debug.Log ("Can't find MenuController");
 		} else {
-			if (menuController.type == 2) {
+			if (menuController.type == 2 || menuController.type == 3) {
 				CalibrateAccelerometer ();
 			}
 		}
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 		float moveHorizontal = 0.0f; //Input.GetAxis ("Horizontal");
 		float moveVertical = 0.0f; //Input.GetAxis ("Vertical");
 		// Input mobile
-		if (menuController.type == 2) {
+		if (menuController.type == 2 || menuController.type == 3) {
 			Vector3 accelerationRaw = Input.acceleration;
 			Vector3 acceleration = FixAcceleration(accelerationRaw);
 			moveHorizontal = acceleration.x;
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetButton("Fire1") && Time.time > nextFire)
+		if ((Input.GetButton("Fire1") || menuController.type == 3) && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);

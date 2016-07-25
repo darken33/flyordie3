@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{FCCD5B98-3F40-9520-C6BF-FB371911A87A}") = "flyordie3", "Assembly-CSharp.csproj", "{252D3120-F788-BFE2-D404-8F5E9A2B42A6}"
 EndProject
+Project("{FCCD5B98-3F40-9520-C6BF-FB371911A87A}") = "flyordie3", "Assembly-CSharp-Editor.csproj", "{DDB5FFEF-35B3-8E68-C016-C50222CBFAB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{252D3120-F788-BFE2-D404-8F5E9A2B42A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252D3120-F788-BFE2-D404-8F5E9A2B42A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252D3120-F788-BFE2-D404-8F5E9A2B42A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB5FFEF-35B3-8E68-C016-C50222CBFAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB5FFEF-35B3-8E68-C016-C50222CBFAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB5FFEF-35B3-8E68-C016-C50222CBFAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB5FFEF-35B3-8E68-C016-C50222CBFAB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

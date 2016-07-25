@@ -2,24 +2,61 @@
 using System.Collections;
 
 public class MenuController : MonoBehaviour {
-	// 0 standalone, 1 webGL, 2 android
+	// 0 standalone, 1 webGL, 2 android, 3 android-VR
 	public int type;
+	// d'ont show the bt_quit on WebGL mode
 	public Component bt_quit;
+	// Sound to play on click
 	public Component soundClick;
-	public GUIText titleText;
-	private float scale;
+	// Canvas Standard
+	public Component canvas;
+	// Canvas VR
+	public Component canvasVR;
+
+	/**
+	 * On start
+	 */ 
 	public void Start() {
-		// Ne pas afficher le bouton quit en mode web
+		// on Android VR mode display CanvasVR
+		GameObject gvrObject = GameObject.FindWithTag ("GVR");
+		GvrViewer gvrViewer = null;
+		if (gvrObject != null) gvrViewer = gvrObject.GetComponent<GvrViewer> (); 
+		if (type == 3) {
+			if (gvrViewer != null)
+				gvrViewer.VRModeEnabled = true;
+			if (canvas != null)
+				canvas.gameObject.SetActive (false);
+			if (canvasVR != null) 
+				canvasVR.gameObject.SetActive (true);
+		}
+		// else display Canvas
+		else {
+			if (gvrViewer != null)
+				gvrViewer.VRModeEnabled = false;
+			if (canvas != null)
+				canvas.gameObject.SetActive (true);
+			if (canvasVR != null) 
+				canvasVR.gameObject.SetActive (false);
+		}
+		// hide Quit button on WebGL Mode
 		if (type == 1) {
 			if (bt_quit != null) {
 				bt_quit.gameObject.SetActive (false);
 			}
 		}
-		// Taille de la police de Titre
-		scale = Screen.currentResolution.width / 854;
-		if (titleText != null) {
-			titleText.fontSize = Mathf.RoundToInt (titleText.fontSize * scale);
-		}
+	}
+
+	/**
+	 * Open the Scene Wait_Play
+	 */ 
+	public void WaitPlay() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Wait_Play");
+	}
+
+	public void OpenScene(string scene) {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene (scene);
 	}
 
 	public void PlayOnClick() {

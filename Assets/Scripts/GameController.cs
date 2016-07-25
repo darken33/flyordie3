@@ -1,20 +1,33 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(Text))]
 public class GameController : MonoBehaviour {
 
 	// GameObjects
 	public GameObject[] hazards;
 	public GameObject[] bonus;
-	public GUIText scoreText;
-	public GUIText gameOverText;
-	public GUIText restartText;
-	public GUIText targetText;
-	public GUIText waveText;
-	public GUIText dieText;
-	public GUIText livesText;
+	public Text score2Text;
+	public Text target2Text;
+	public Text lives2Text;
+	public Text wave2Text;
+	public Text gameOver2Text;
+	public Text die2Text;
+	public Text restart2Text;
+	public TextMesh score3Text;
+	public TextMesh lives3Text;
+	public TextMesh wave3Text;
+	public TextMesh gameOver3Text;
+	public TextMesh die3Text;
+	public TextMesh restart3Text;
+	public GameObject target;
+	public GameObject pointer;
+
 	public Component bt_no;
 	public Component bt_yes;
+	public Component bt_no_vr;
+	public Component bt_yes_vr;
 
 	public int startEnemyType;
 	public int bonusDec;
@@ -40,23 +53,22 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		scale = Screen.currentResolution.width / 854;
+		pointer.SetActive (false);
 		lives = 5;
-		livesText.fontSize = Mathf.RoundToInt(livesText.fontSize * scale);
-		scoreText.fontSize = Mathf.RoundToInt(scoreText.fontSize * scale);
-		waveText.fontSize = Mathf.RoundToInt(waveText.fontSize * scale);
-		targetText.fontSize = Mathf.RoundToInt(targetText.fontSize * scale);
-		dieText.fontSize = Mathf.RoundToInt(dieText.fontSize * scale);
-		gameOverText.fontSize = Mathf.RoundToInt(gameOverText.fontSize * scale);
-		restartText.fontSize = Mathf.RoundToInt(restartText.fontSize * scale);
 		bt_no.gameObject.SetActive (false);
 		bt_yes.gameObject.SetActive (false);
+		bt_no_vr.gameObject.SetActive (false);
+		bt_yes_vr.gameObject.SetActive (false);
 		gameOver = false;
 		restart = false;
-		restartText.text = "";
-		gameOverText.text = "";
-		dieText.text = "";
-		targetText.text = "+";
+		restart2Text.text = "";
+		restart3Text.text = "";
+		gameOver2Text.text = "";
+		gameOver3Text.text = "";
+		die2Text.text = "";
+		die3Text.text = "";
+		target2Text.text = "+";
+		target.SetActive (true);
 		score = 0;
 		wave = 0;
 		bonusRandom = 100;
@@ -133,8 +145,14 @@ public class GameController : MonoBehaviour {
 			if (gameOver) {
 				bt_no.gameObject.SetActive (true);
 				bt_yes.gameObject.SetActive (true);
-				dieText.text = "You died on wave " + wave + ", your score is " + score;
-				restartText.text = "Do you want to restart game ?";
+				bt_no_vr.gameObject.SetActive (true);
+				bt_yes_vr.gameObject.SetActive (true);
+				die2Text.text = "You died on wave " + wave + ", your score is " + score;
+				restart2Text.text = "Do you want to restart game ?";
+				die3Text.text = "You died on wave " + wave + ", your score is " + score;
+				restart3Text.text = "Do you want to restart game ?";
+				PointerController pointerController = pointer.GetComponent<PointerController> ();
+				pointerController.Activate ();
 				restart = true;
 				break;
 			}
@@ -147,19 +165,24 @@ public class GameController : MonoBehaviour {
 	}
 
 	void UpdateScore() {
-		scoreText.text = "Score : " + score;
+		score2Text.text = "Score : " + score;
+		score3Text.text = "Score : " + score;
 	}
 	void UpdateWave() {
-		waveText.text = "Wave : " + wave;
+		wave2Text.text = "Wave : " + wave;
+		wave3Text.text = "Wave : " + wave;
 	}
 	void UpdateLives() {
-		livesText.text = "Lives : " + lives;
+		lives2Text.text = "Lives : " + lives;
+		lives3Text.text = "Lives : " + lives;
 	}
 	public void GameOver(){
 		lives = 0;
 		UpdateLives ();
-		targetText.text = "";
-		gameOverText.text = "Game Over";
+		target2Text.text = "";
+		target.SetActive (false);
+		gameOver2Text.text = "Game Over";
+		gameOver3Text.text = "Game Over";
 		gameOver = true;
 	}
 }
