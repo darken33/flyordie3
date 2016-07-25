@@ -20,6 +20,7 @@ public class PointerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		zPosition = transform.position.z;
+		gameObject.GetComponent<TextMesh> ().text = "";
 		GameObject menuControllerObject = GameObject.FindWithTag ("MenuController");
 		if (menuControllerObject != null) {
 			menuController = menuControllerObject.GetComponent<MenuController> ();
@@ -27,13 +28,17 @@ public class PointerController : MonoBehaviour {
 		if (menuController == null) {
 			Debug.Log ("Can't find MenuController");
 		}
-		Activate ();
+		if (menuController.type == 3) {
+			Activate ();
+		}
 	}
 
 	public void Activate() {
 		gameObject.SetActive (true);
 		gameObject.GetComponent<TextMesh> ().text = "";
-		StartCoroutine (InitiailizePointer ());
+		if (menuController.type == 3) {
+			StartCoroutine (InitiailizePointer ());
+		}
 	}
 
 	IEnumerator InitiailizePointer() {
