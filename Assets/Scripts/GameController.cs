@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
 
 	// Canvas
 	public Text score2Text;
-	public Text target2Text;
+	public TextMesh target2Text;
 	public Text lives2Text;
 	public Text wave2Text;
 	public Text gameOver2Text;
@@ -74,11 +74,20 @@ public class GameController : MonoBehaviour {
 	private int bonusRandom;
 	private bool gameOver;
 	private bool restart;
+	private MenuController menuController;
 
 	// Use this for initialization
 	void Start () {
 		// Unactive the pointer (VR Only)
 		pointer.SetActive (false);
+		// Attach MenuController
+		GameObject menuControllerObject = GameObject.FindWithTag ("MenuController");
+		if (menuControllerObject != null) {
+			menuController = menuControllerObject.GetComponent<MenuController> ();
+		}
+		if (menuController == null) {
+			Debug.Log ("Can't find MenuController");
+		}
 		// Initialization score, lives, wave, ...
 		lives = 5;
 		score = 0;
@@ -196,8 +205,10 @@ public class GameController : MonoBehaviour {
 				die3Text.text = "You died on wave " + wave + ", your score is " + score;
 				restart3Text.text = "Do you want to restart game ?";
 				// Try to activate the pointer (VR Only)
-				PointerController pointerController = pointer.GetComponent<PointerController> ();
-				pointerController.Activate ();
+				if (menuController.type == 3) {
+					PointerController pointerController = pointer.GetComponent<PointerController> ();
+					pointerController.Activate ();
+				}
 				// Exit the infinite loop
 				restart = true;
 				break;
