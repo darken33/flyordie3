@@ -2,6 +2,23 @@
 using UnityEngine.UI;
 using System.Collections;
 
+// Scores Values
+[System.Serializable]
+public class Scoring
+{
+	public int score;
+	public int date;
+}
+
+// Scores Values from server
+[System.Serializable]
+public class ScoringWeb
+{
+	public string date;
+	public string score;
+	public string rank;
+}
+
 /**
  * Fly Or Die 3 by Philippe Bousquet <darken33@free.fr>
  * GameController - The main controller of the game (In Game)
@@ -18,12 +35,13 @@ public class GameController : MonoBehaviour {
 
 	// Canvas
 	public Text score2Text;
-	public Text target2Text;
+	public TextMesh target2Text;
 	public Text lives2Text;
 	public Text wave2Text;
 	public Text gameOver2Text;
 	public Text die2Text;
 	public Text restart2Text;
+	public Text newRecord2Text;
 	public Component bt_no;
 	public Component bt_yes;
 
@@ -34,6 +52,7 @@ public class GameController : MonoBehaviour {
 	public TextMesh gameOver3Text;
 	public TextMesh die3Text;
 	public TextMesh restart3Text;
+	public TextMesh newRecord3Text;
 	public Component bt_no_vr;
 	public Component bt_yes_vr;
 
@@ -74,15 +93,28 @@ public class GameController : MonoBehaviour {
 	private int bonusRandom;
 	private bool gameOver;
 	private bool restart;
+	private MenuController menuController;
+	private string record;
+	private string bestScoreRank;
+	private Scoring lastGame;
 
 	// Use this for initialization
 	void Start () {
 		// Unactive the pointer (VR Only)
 		pointer.SetActive (false);
+		// Attach MenuController
+		GameObject menuControllerObject = GameObject.FindWithTag ("MenuController");
+		if (menuControllerObject != null) {
+			menuController = menuControllerObject.GetComponent<MenuController> ();
+		}
+		if (menuController == null) {
+			Debug.Log ("Can't find MenuController");
+		}
 		// Initialization score, lives, wave, ...
 		lives = 5;
 		score = 0;
 		wave = 0;
+		bestScoreRank = "";
 		bonusRandom = 100;
 		hazardCount = hazardStart;
 		numberEnemyTypes = startEnemyType;
@@ -94,9 +126,13 @@ public class GameController : MonoBehaviour {
 		restart2Text.text = "";
 		gameOver2Text.text = "";
 		die2Text.text = "";
+		newRecord2Text.text = "";
+		newRecord2Text.gameObject.SetActive (false);
 		// Update Canvas VR (VR Only)
 		bt_no_vr.gameObject.SetActive (false);
 		bt_yes_vr.gameObject.SetActive (false);
+		newRecord3Text.text = "";
+		newRecord3Text.gameObject.SetActive (false);
 		restart3Text.text = "";
 		gameOver3Text.text = "";
 		die3Text.text = "";
@@ -190,14 +226,18 @@ public class GameController : MonoBehaviour {
 				bt_yes.gameObject.SetActive (true);
 				die2Text.text = "You died on wave " + wave + ", your score is " + score;
 				restart2Text.text = "Do you want to restart game ?";
+				newRecord2Text.gameObject.SetActive (true);
 				// Update Canvas VR
 				bt_no_vr.gameObject.SetActive (true);
 				bt_yes_vr.gameObject.SetActive (true);
 				die3Text.text = "You died on wave " + wave + ", your score is " + score;
 				restart3Text.text = "Do you want to restart game ?";
+				newRecord3Text.gameObject.SetActive (true);
 				// Try to activate the pointer (VR Only)
-				PointerController pointerController = pointer.GetComponent<PointerController> ();
-				pointerController.Activate ();
+				if (menuController.type == 3) {
+					PointerController pointerController = pointer.GetComponent<PointerController> ();
+					pointerController.Activate ();
+				}
 				// Exit the infinite loop
 				restart = true;
 				break;
@@ -250,5 +290,69 @@ public class GameController : MonoBehaviour {
 		gameOver2Text.text = "Game Over";
 		gameOver3Text.text = "Game Over";
 		gameOver = true;
+		string date = ""+System.DateTime.Now.Year+(System.DateTime.Now.Month < 10 ? "0":"")+System.DateTime.Now.Month+(System.DateTime.Now.Day < 10 ? "0":"")+System.DateTime.Now.Day;
+		int dateNum = int.Parse (date);
+		// Save this game
+		lastGame = new Scoring ();
+		lastGame.score = score;
+		lastGame.date = dateNum;
+		Debug.Log (JsonUtility.ToJson (lastGame));
+		PlayerPrefs.SetString("lastGame", JsonUtility.ToJson(lastGame));
+		// Check personal record today
+		Scoring todayGame = null;
+		if (PlayerPrefs.HasKey ("todayGame")) {
+			todayGame = JsonUtility.FromJson<Scoring> (PlayerPrefs.GetString ("todayGame"));
+		} 
+		if (todayGame == null || score > todayGame.score  || lastGame.date != todayGame.date) {
+			PlayerPrefs.SetString("todayGame", JsonUtility.ToJson(lastGame));
+		}
+		// Check personal record
+		Scoring bestGame = null;
+		if (PlayerPrefs.HasKey ("bestGame")) {
+			bestGame = JsonUtility.FromJson<Scoring> (PlayerPrefs.GetString ("bestGame"));
+		} 
+		if (bestGame == null || score > bestGame.score) {
+			PlayerPrefs.SetString("bestGame", JsonUtility.ToJson(lastGame));
+			newRecord2Text.text = "NEW PERSONAL RECORD !!!\n";
+			newRecord3Text.text = "NEW PERSONAL RECORD !!!\n";
+		}
+		// Save score to server
+		WWWForm data = new WWWForm ();
+		data.AddField ("key", RestServicesConstants.KEY);
+		data.AddField ("score", lastGame.score);
+		data.AddField ("date", lastGame.date);
+		StartCoroutine (CallServiceStorage (data));
+	}
+
+	IEnumerator CallServiceStorage(WWWForm data) {
+		WWW post_service = new WWW (RestServicesConstants.STORAGE_SERVICE_URL, data);
+		yield return post_service;
+		if (post_service.error != null) {
+			Debug.Log (post_service.error);
+		}
+		// Compare score to the server
+		StartCoroutine (CallServiceGet ());
+	}
+
+	IEnumerator CallServiceGet() {
+		WWW get_service = new WWW (RestServicesConstants.GET_SERVICE_URL+"?key="+RestServicesConstants.KEY+"&score="+score);
+		yield return get_service;
+		if (get_service.error == null) {
+			string result2 = get_service.text;
+			string[] res = result2.Split ('#');
+			ScoringWeb scw = new ScoringWeb ();
+			scw.date = res [0];
+			scw.score = res [1];
+			scw.rank = res [2];
+			//	JsonUtility.FromJson<ScoringWeb> (result2);
+			if (score >= int.Parse (scw.score)) {
+				newRecord2Text.text = "NEW WORLD RECORD !!!\n";
+				newRecord3Text.text = "NEW WORLD RECORD !!!\n";
+			}
+			newRecord2Text.text = newRecord2Text.text + "BEST SCORE IS " + scw.score + " YOUR RANK IS " + scw.rank;
+			newRecord3Text.text = newRecord3Text.text + "BEST SCORE IS " + scw.score + " YOUR RANK IS " + scw.rank;
+		} else {
+			Debug.Log (get_service.error);
+		}
 	}
 }

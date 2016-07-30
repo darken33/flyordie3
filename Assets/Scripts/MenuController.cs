@@ -75,6 +75,14 @@ public class MenuController : MonoBehaviour {
 	}
 
 	/**
+	 * ScoresOnClick() - Open the scene Scores
+	 */ 
+	public void ScoresOnClick() {
+		soundClick.GetComponent<AudioSource> ().Play ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Scores");
+	}
+
+	/**
 	 * HelpOnClick() - Open the scene Help_Player
 	 */ 
 	public void HelpOnClick() {
