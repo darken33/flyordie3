@@ -1,5 +1,5 @@
 Title   : Fly Or Die 3
-Version : 1.2 
+Version : 1.3 
 Type    : 3D Space Shooter
 Author  : Philippe Bousquet <darken33@free.fr>
 Web     : http://darken33.net/wp/index.php/2016/07/12/fly-or-die-3-a-simple-3d-space-shooter-game/
@@ -81,6 +81,9 @@ The game’s source code is under Gnu General Public License v3 and is available o
 
 CHANGELOG
 ---------
+v1.3 :
+- Share and compare your scores with other players
+
 v1.2 :
 - Add support to Google Cardboard
 - Lights in game improved

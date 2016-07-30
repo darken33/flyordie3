@@ -65,6 +65,8 @@ public class ClickController : MonoBehaviour {
 			menuController.WaitPlay();
 		} else if (colliderName == "PLAY_bt") {
 			menuController.WaitPlay();
+		} else if (colliderName == "SCORES_bt") {
+			menuController.ScoresOnClick();
 		} else if (colliderName == "HELP_bt") {
 			menuController.HelpOnClick();
 		} else if (colliderName == "HISTORY_bt") {
