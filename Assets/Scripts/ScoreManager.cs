@@ -116,7 +116,7 @@ public class ScoreManager : MonoBehaviour {
 	 * GetBestScore() - Get the best score from server
 	 */ 
 	IEnumerator GetBestScore() {
-		WWW get_service = new WWW (RestServicesConstants.GET_SERVICE_URL+"?key="+RestServicesConstants.KEY+"&score="+playerBestGame.score);
+		WWW get_service = new WWW (RestServicesConstants.GET_SERVICE_URL+"?key="+RestServicesConstants.KEY+(playerBestGame != null ? "&score="+playerBestGame.score : ""));
 		yield return get_service;
 		if (get_service.error == null) {
 			string result2 = get_service.text;

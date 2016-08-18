@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour {
 	public Text score2Text;
 	public TextMesh target2Text;
 	public Text lives2Text;
+	public Text shields2Text;
 	public Text wave2Text;
 	public Text gameOver2Text;
 	public Text die2Text;
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour {
 	// Canvas VR (VR Only)
 	public TextMesh score3Text;
 	public TextMesh lives3Text;
+	public TextMesh shields3Text;
 	public TextMesh wave3Text;
 	public TextMesh gameOver3Text;
 	public TextMesh die3Text;
@@ -88,6 +90,7 @@ public class GameController : MonoBehaviour {
 	private int score;
 	private int lives;
 	private int wave;
+	private int shield;
 	private int hazardCount;
 	private int numberEnemyTypes;
 	private int bonusRandom;
@@ -111,9 +114,10 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("Can't find MenuController");
 		}
 		// Initialization score, lives, wave, ...
-		lives = 5;
+		lives = 100;
 		score = 0;
 		wave = 0;
+		shield = 0;
 		bestScoreRank = "";
 		bonusRandom = 100;
 		hazardCount = hazardStart;
@@ -160,8 +164,36 @@ public class GameController : MonoBehaviour {
 	/**
 	 * DecLives() - decrease lives of player
 	 */
-	public int DecLives() {
-		lives--;
+	public int DecLives(int value) {
+		lives-=value;
+		if (lives < 0) {
+			lives = 0;
+		}
+		UpdateLives ();
+		return lives;
+	}
+
+	/**
+	 * DecShields() - decrease Shields of player
+	 */
+	public int DecShields(int value) {
+		shield-=value;
+		int returnValue = shield;
+		if (shield < 0) {
+			shield = 0;
+		}
+		UpdateShields ();
+		return returnValue;
+	}
+
+	/**
+	 * IncLives() - increase lives of player
+	 */
+	public int IncLives() {
+		lives+=10;
+		if (lives > 100) {
+			lives = 100;
+		}
 		UpdateLives ();
 		return lives;
 	}
@@ -169,15 +201,14 @@ public class GameController : MonoBehaviour {
 	/**
 	 * IncLives() - increase lives of player
 	 */
-	public int IncLives() {
-		lives++;
-		if (lives > 5) {
-			lives = 5;
+	public int IncShields() {
+		shield+=25;
+		if (shield > 100) {
+			shield = 100;
 		}
-		UpdateLives ();
-		return lives;
+		UpdateShields();
+		return shield;
 	}
-
 
 	/**
 	 * SpawnWaves() - Routine to spawn enemies on waves
@@ -241,7 +272,9 @@ public class GameController : MonoBehaviour {
 				// Exit the infinite loop
 				restart = true;
 				break;
-			}
+			} 
+			// If player survive on the wave increase the bonus chance
+			DecBonusRandom ();
 		}
 	}
 
@@ -273,8 +306,16 @@ public class GameController : MonoBehaviour {
 	 * UpdateLives() - Update lives text
 	 */ 
 	void UpdateLives() {
-		lives2Text.text = "Lives : " + lives;
-		lives3Text.text = "Lives : " + lives;
+		lives2Text.text = "Armor : " + lives + "%";
+		lives3Text.text = "Armor : " + lives + "%";
+	}
+
+	/**
+	 * UpdateShields() - Update shield text
+	 */ 
+	void UpdateShields() {
+		shields2Text.text = "Shield : " + shield + "%";
+		shields3Text.text = "Shield : " + shield + "%";
 	}
 
 	/**
@@ -283,6 +324,8 @@ public class GameController : MonoBehaviour {
 	public void GameOver(){
 		lives = 0;
 		UpdateLives ();
+		shield = 0;
+		UpdateShields();
 		// Unactive target
 		target2Text.text = "";
 		target.SetActive (false);
