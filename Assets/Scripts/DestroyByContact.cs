@@ -15,11 +15,17 @@ public class DestroyByContact : MonoBehaviour {
 	// Explosion for the player
 	public GameObject playerExplosion;
 
+	// Explosion for the object
+	public GameObject playerLooseLife;
+
 	// Animation for shield Activation
 	public GameObject shieldActivation;
 
 	// Score earned when the object is destroyed
 	public int scoreValue;
+
+	// Life decrement when the player is touched
+	public int lifeValue;
 
 	// The Game Controller
 	private GameController gameController;
@@ -72,17 +78,49 @@ public class DestroyByContact : MonoBehaviour {
 					gameController.AddScore (scoreValue);
 					gameController.DecBonusRandom ();
 				}
-				// If it's destroyed by the Player (the player Explode and its the end of the game)
-				if (other.tag == "Player") {
-					Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-					if (gameController != null) {
-						gameController.GameOver ();
+				// If other is the Player
+				else if (other.tag == "Player") {
+					// Reset Lasers Spawns
+					playerController.ResetLazers ();
+					// Decrease the player lives
+					if (gameController.DecLives (lifeValue) <= 0) {
+						// If player life is 0 it's the end of the game
+						Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+						if (gameController != null) {
+							gameController.GameOver ();
+						}
+						// Destroy player
+						Destroy (other.gameObject);
+					} else {
+						// Play a laser impact
+						Instantiate (playerLooseLife, other.transform.position, other.transform.rotation);
 					}
 				}
 				// If it's destroyed by the Shield (desactive it)
-				if (other.tag == "Shield") {
+				else if (other.tag == "Shield") {
 					Instantiate (shieldActivation, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
-					other.gameObject.SetActive (false);
+					int hitpoints = gameController.DecShields (lifeValue); 
+					if (hitpoints <= 0) {
+						Debug.Log ("DEGATS deg : " + lifeValue + ", hp : " + hitpoints); 
+						other.gameObject.SetActive (false);
+						if (hitpoints < 0) {
+							// Reset Lasers Spawns
+							playerController.ResetLazers ();
+							// Decrease the player lives
+							if (gameController.DecLives (-hitpoints) <= 0) {
+								// If player life is 0 it's the end of the game
+								Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+								if (gameController != null) {
+									gameController.GameOver ();
+								}
+								// Destroy player
+								Destroy (playerController.gameObject);
+							} else {
+								// Play a laser impact
+								Instantiate (playerLooseLife, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
+							}
+						}
+					}
 				} 
 				// Else destroy the other object
 				else {
@@ -100,6 +138,8 @@ public class DestroyByContact : MonoBehaviour {
 				Instantiate (explosion, this.transform.position, this.transform.rotation);
 				Instantiate (shieldActivation, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
 				playerController.SetActiveShield ();
+				gameController.IncShields();
+				gameController.AddScore (scoreValue);
 			} 
 			// Destroy the object;
 			Destroy(gameObject);
@@ -111,6 +151,7 @@ public class DestroyByContact : MonoBehaviour {
 			if (other.tag == "Bolt_p" || other.tag == "Player") {
 				Instantiate (explosion, this.transform.position, this.transform.rotation);
 				playerController.IncLazers();
+				gameController.AddScore (scoreValue);
 			} 
 			// Destroy the object;
 			Destroy(gameObject);
@@ -122,6 +163,7 @@ public class DestroyByContact : MonoBehaviour {
 			if (other.tag == "Bolt_p" || other.tag == "Player") {
 				Instantiate (explosion, this.transform.position, this.transform.rotation);
 				gameController.IncLives();
+				gameController.AddScore (scoreValue);
 			} 
 			// Destroy the object;
 			Destroy(gameObject);
@@ -132,14 +174,35 @@ public class DestroyByContact : MonoBehaviour {
 			// If other is the Shield desactivate it
 			if (other.tag == "Shield") {
 				Instantiate (shieldActivation, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
-				other.gameObject.SetActive(false);
+				int hitpoints = gameController.DecShields (lifeValue); 
+				if (hitpoints <= 0) {
+					Debug.Log ("DEGATS deg : " + lifeValue + ", hp : " + hitpoints); 
+					other.gameObject.SetActive (false);
+					if (hitpoints < 0) {
+						// Reset Lasers Spawns
+						playerController.ResetLazers ();
+						// Decrease the player lives
+						if (gameController.DecLives (-hitpoints) <= 0) {
+							// If player life is 0 it's the end of the game
+							Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+							if (gameController != null) {
+								gameController.GameOver ();
+							}
+							// Destroy player
+							Destroy (playerController.gameObject);
+						} else {
+							// Play a laser impact
+							Instantiate (playerLooseLife, playerController.gameObject.transform.position, playerController.gameObject.transform.rotation);
+						}
+					}
+				}
 			} 
 			// If other is the Player
-			if (other.tag == "Player") {
+			else if (other.tag == "Player") {
 				// Reset Lasers Spawns
 				playerController.ResetLazers ();
 				// Decrease the player lives
-				if (gameController.DecLives () <= 0) {
+				if (gameController.DecLives (lifeValue) <= 0) {
 					// If player life is 0 it's the end of the game
 					Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 					if (gameController != null) {
@@ -149,7 +212,7 @@ public class DestroyByContact : MonoBehaviour {
 					Destroy (other.gameObject);
 				} else {
 					// Play a laser impact
-					Instantiate (explosion, other.transform.position, other.transform.rotation);
+					Instantiate (playerLooseLife, other.transform.position, other.transform.rotation);
 				}
 			}
 			// Destroy the object

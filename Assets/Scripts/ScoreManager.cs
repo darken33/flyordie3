@@ -4,7 +4,7 @@ using System.Collections;
 
 // Interface RestServicesConstants
 public class RestServicesConstants {
-	 
+
 	// Autorisation Key
 	public const string KEY = "349304fb9411b5a286dedc1d1d689ddf6";
 	// Starage service URL
@@ -116,7 +116,7 @@ public class ScoreManager : MonoBehaviour {
 	 * GetBestScore() - Get the best score from server
 	 */ 
 	IEnumerator GetBestScore() {
-		WWW get_service = new WWW (RestServicesConstants.GET_SERVICE_URL+"?key="+RestServicesConstants.KEY+"&score="+playerBestGame.score);
+		WWW get_service = new WWW (RestServicesConstants.GET_SERVICE_URL+"?key="+RestServicesConstants.KEY+(playerBestGame != null ? "&score="+playerBestGame.score : ""));
 		yield return get_service;
 		if (get_service.error == null) {
 			string result2 = get_service.text;
